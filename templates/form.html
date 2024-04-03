@@ -1,0 +1,96 @@
+<html> 
+<head> 
+    <style type="text/css"> 
+        body{ 
+            background-color: #9ccee1; 
+            text-align: center; 
+        } 
+        form{ 
+            font-size: 19px; 
+            background-color: #9ccee1; 
+            padding: 40px 100px; 
+            text-align: center; 
+        } 
+        input{ 
+             border-bottom: 1px solid #ffffff; 
+            border-top: 0px; 
+            border-right: 0px; 
+            border-left: 0px; 
+            font-size: 14px; 
+            padding: 11px 14px; 
+            margin: 15px 0px; 
+            background: transparent; 
+            border-radius: 37px; 
+            width: 100%; 
+            max-width: 27%; 
+        } 
+        select { 
+            padding: 7px; 
+            border-radius: 15px; 
+            margin: 12px 0px; 
+            font-size: 14px; 
+            border: 1px solid #cbcbcb; 
+        } 
+        input[type="submit"] { 
+            font-size: 15px; 
+            border: 1px solid; 
+            border-radius: 22px; 
+            background-color: #282a2a; 
+            color: white; 
+            padding: 14px 35px; 
+            width: 100%; 
+            max-width: 12%; 
+        } 
+ 
+    </style> 
+</head> 
+<body> 
+<form action="{{url_for('predict_datapoint')}}" method="POST"> 
+    <div class="form-group"> 
+        <label for="Pregnancies">Pregnancies:</label>&nbsp; &nbsp; &nbsp; 
+        <input type="text" id="Pregnancies" name="Pregnancies" placeholder="Enter Pregnancies value (int)"> 
+    </div> 
+ 
+    <div class="form-group"> 
+        <label for="Glucose">Glucose:</label>&nbsp; &nbsp; &nbsp; 
+        <input type="text" id="Glucose" name="Glucose" placeholder="Enter Glucose value (int)"> 
+    </div> 
+ 
+    <div class="form-group">   
+        <label for="BloodPressure">BloodPressure:</label>&nbsp; &nbsp; &nbsp; 
+        <input type="text" id="BloodPressure" name="BloodPressure" placeholder="Enter BloodPressure value (int)"> 
+    </div> 
+     
+    <div class="form-group"> 
+        <label for="SkinThickness">SkinThickness:</label>&nbsp; &nbsp; &nbsp; 
+        <input type="text" id="SkinThickness" name="SkinThickness" placeholder="Enter SkinThickness value (int)"> 
+    </div> 
+   
+    <div class="form-group"> 
+        <label for="Insulin">Insulin:</label>&nbsp; &nbsp; &nbsp; 
+        <input type="text" id="Insulin" name="Insulin" placeholder="Enter Insulin value (int)"> 
+    </div> 
+
+    <div class="form-group"> 
+        <label for="Insulin">BMI:</label>&nbsp; &nbsp; &nbsp; 
+        <input type="text" id="BMI" name="BMI" placeholder="Enter BMI value (float)"> 
+    </div>
+   
+    <div class="form-group"> 
+        <label for="DiabetesPedigreeFunction">DiabetesPedigreeFunction:</label>&nbsp; &nbsp; &nbsp; 
+        <input type="text" id="DiabetesPedigreeFunction" name="DiabetesPedigreeFunction" placeholder="Enter DiabetesPedigreeFunction value (float)"> 
+    </div>
+    
+    <div class="form-group"> 
+        <label for="Age">Age:</label>&nbsp; &nbsp; &nbsp; 
+        <input type="text" id="Age" name="Age" placeholder="Enter Age value (int)"> 
+    </div> 
+   
+
+<div style="clear:both;"></div> 
+  <input type="submit" value="Submit"> 
+</form> 
+ 
+{{final_result}} 
+</body> 
+</html>
